@@ -1,0 +1,5 @@
+/target
+/doc.txt
+/env.txt
+/.env
+.env.env.*
