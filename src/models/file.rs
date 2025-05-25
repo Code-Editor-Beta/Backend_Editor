@@ -1,6 +1,6 @@
+use chrono::{DateTime, Utc};
 use mongodb::bson::oid::ObjectId;
 use serde::{Deserialize, Serialize};
-use chrono::{DateTime, Utc};
 
 #[derive(Serialize, Deserialize, Clone)]
 pub struct File {
@@ -9,6 +9,7 @@ pub struct File {
     pub name: String,
     pub path: String,
     pub project_id: ObjectId,
+    pub id_dir: bool,
     pub content: String,
     pub language: String,
     pub versions: Vec<FileVersion>,
