@@ -1,9 +1,11 @@
+use crate::services::crdt_ops;
 use crate::{models::project::Project, AppState};
 use anyhow::Result;
 use axum::{
     extract::{Json, State},
     http::StatusCode,
     response::IntoResponse,
+    response::Response,
 };
 use base64::{engine::general_purpose::STANDARD as B64, Engine as _};
 use chrono::Utc;
@@ -13,7 +15,6 @@ use serde::Deserialize;
 use std::{collections::HashMap, path::PathBuf, sync::Arc};
 use tokio::task;
 use walkdir::WalkDir;
-
 #[derive(Deserialize)]
 pub struct CreateProjectRequest {
     pub user_id: String,
@@ -122,18 +123,19 @@ async fn fetch_template(
 /**
  * api endpoint to create_project
  */
+#[axum::debug_handler]
 pub async fn create_project(
     State(state): State<AppState>,
     Json(payload): Json<CreateProjectRequest>,
-) -> impl IntoResponse {
+) -> Result<Response, (StatusCode, String)> {
     let template_res = fetch_template(&payload.framework, &state).await;
 
-    let template = match template_res {
-        Ok(t) => t,
-        Err(e) => {
-            return (StatusCode::BAD_REQUEST, format!("template error: {e}")).into_response();
-        }
-    };
+    let template = template_res.map_err(|_err| {
+        (
+            StatusCode::BAD_REQUEST,
+            format!("Error fetching Default Template"),
+        )
+    })?;
 
     let project = Project {
         id: ObjectId::new(),
@@ -147,12 +149,17 @@ pub async fn create_project(
     let collection = state.db.collection::<mongodb::bson::Document>("projects");
     let serialized = mongodb::bson::to_document(&project).unwrap();
 
-    match collection.insert_one(serialized).await {
-        Ok(_) => (StatusCode::OK, Json(project)).into_response(),
-        Err(e) => (
+    collection.insert_one(serialized).await.map_err(|e| {
+        (
             StatusCode::INTERNAL_SERVER_ERROR,
             format!("DB insert error: {}", e),
         )
-            .into_response(),
-    }
+    })?;
+
+    //Initialise the Socket room for users
+    crdt_ops::initialize_crdt_room(&state, &project.project_name.to_string(), &project.files)
+        .await
+        .map_err(|_| (StatusCode::BAD_REQUEST, "Error creating room".to_string()))?;
+
+    Ok(Json("User created successfully").into_response())
 }
