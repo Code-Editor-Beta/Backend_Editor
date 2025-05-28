@@ -1,0 +1,137 @@
+[2m2025-05-28T19:02:37.362463Z[0m [32m INFO[0m [2mfullstack_code_editor_backend[0m[2m:[0m Logging initialised
+[2m2025-05-28T19:03:40.150208Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::crdt_ops[0m[2m:[0m Initializing crdt Doc for project with projectID 5
+[2m2025-05-28T19:03:40.150893Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::crdt_ops[0m[2m:[0m Inserting room with projectId: 5
+[2m2025-05-28T19:03:40.150973Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::crdt_ops[0m[2m:[0m Inserted room for project: 5, total rooms: 1
+[2m2025-05-28T19:03:40.150987Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::redis[0m[2m:[0m Persisting crdt snapshot to redis
+[2m2025-05-28T19:04:07.025930Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m user tries to connect for projecId: 5
+[2m2025-05-28T19:04:07.026011Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Tried to fetch room from state
+[2m2025-05-28T19:04:07.026452Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Incrementing userCount in room
+[2m2025-05-28T19:04:07.026499Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Sharing snapshot of folders
+[2m2025-05-28T19:04:07.026708Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Folder Snapshot Sent
+[2m2025-05-28T19:04:51.051889Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m user tries to connect for projecId: 5
+[2m2025-05-28T19:04:51.051977Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Tried to fetch room from state
+[2m2025-05-28T19:04:51.052338Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Incrementing userCount in room
+[2m2025-05-28T19:04:51.052396Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Sharing snapshot of folders
+[2m2025-05-28T19:04:51.052573Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Folder Snapshot Sent
+[2m2025-05-28T19:04:59.066754Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m user get disconneted
+[2m2025-05-28T19:05:01.663996Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m user get disconneted
+[2m2025-05-28T19:05:01.664051Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::redis[0m[2m:[0m Persisting crdt snapshot to redis
+[2m2025-05-28T19:05:10.159002Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m user tries to connect for projecId: 5
+[2m2025-05-28T19:05:10.159115Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Tried to fetch room from state
+[2m2025-05-28T19:05:10.159510Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Incrementing userCount in room
+[2m2025-05-28T19:05:10.159550Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Sharing snapshot of folders
+[2m2025-05-28T19:05:10.159718Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Folder Snapshot Sent
+[2m2025-05-28T19:05:30.341760Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m user tries to connect for projecId: 5
+[2m2025-05-28T19:05:30.341814Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Tried to fetch room from state
+[2m2025-05-28T19:05:30.342110Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Incrementing userCount in room
+[2m2025-05-28T19:05:30.342159Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Sharing snapshot of folders
+[2m2025-05-28T19:05:30.342376Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Folder Snapshot Sent
+[2m2025-05-28T19:05:36.080561Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m user tries to connect for projecId: 5
+[2m2025-05-28T19:05:36.080621Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Tried to fetch room from state
+[2m2025-05-28T19:05:36.080945Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Incrementing userCount in room
+[2m2025-05-28T19:05:36.080973Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Sharing snapshot of folders
+[2m2025-05-28T19:05:36.081140Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Folder Snapshot Sent
+[2m2025-05-28T19:05:42.085976Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m user tries to connect for projecId: 5
+[2m2025-05-28T19:05:42.086035Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Tried to fetch room from state
+[2m2025-05-28T19:05:42.086336Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Incrementing userCount in room
+[2m2025-05-28T19:05:42.086375Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Sharing snapshot of folders
+[2m2025-05-28T19:05:42.086572Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Folder Snapshot Sent
+[2m2025-05-28T19:05:57.524166Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m user get disconneted
+[2m2025-05-28T19:06:00.095440Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m user get disconneted
+[2m2025-05-28T19:06:01.390902Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m user get disconneted
+[2m2025-05-28T19:06:03.192427Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m user get disconneted
+[2m2025-05-28T19:06:03.192536Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::redis[0m[2m:[0m Persisting crdt snapshot to redis
+[2m2025-05-28T19:07:24.439368Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m user tries to connect for projecId: 5
+[2m2025-05-28T19:07:24.439424Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Tried to fetch room from state
+[2m2025-05-28T19:07:24.439782Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Incrementing userCount in room
+[2m2025-05-28T19:07:24.439818Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Sharing snapshot of folders
+[2m2025-05-28T19:07:24.440050Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Folder Snapshot Sent
+[2m2025-05-28T19:07:59.135067Z[0m [32m INFO[0m [2mfullstack_code_editor_backend[0m[2m:[0m Logging initialised
+[2m2025-05-28T19:08:01.194673Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m user tries to connect for projecId: 5
+[2m2025-05-28T19:08:01.194736Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Tried to fetch room from state
+[2m2025-05-28T19:08:01.459012Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::redis[0m[2m:[0m Successfully loaded snapshot from Redis for 5
+[2m2025-05-28T19:08:01.459991Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Incrementing userCount in room
+[2m2025-05-28T19:08:01.460025Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Sharing snapshot of folders
+[2m2025-05-28T19:08:01.460157Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Folder Snapshot Sent
+[2m2025-05-28T19:08:07.410321Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m user get disconneted
+[2m2025-05-28T19:08:07.410384Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::redis[0m[2m:[0m Persisting crdt snapshot to redis
+[2m2025-05-28T19:08:07.502492Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m user tries to connect for projecId: 5
+[2m2025-05-28T19:08:07.502544Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Tried to fetch room from state
+[2m2025-05-28T19:08:07.502829Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Incrementing userCount in room
+[2m2025-05-28T19:08:07.502879Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Sharing snapshot of folders
+[2m2025-05-28T19:08:07.503037Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Folder Snapshot Sent
+[2m2025-05-28T19:08:08.473338Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m user get disconneted
+[2m2025-05-28T19:08:08.473423Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::redis[0m[2m:[0m Persisting crdt snapshot to redis
+[2m2025-05-28T19:08:08.568181Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m user tries to connect for projecId: 5
+[2m2025-05-28T19:08:08.568275Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Tried to fetch room from state
+[2m2025-05-28T19:08:08.568686Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Incrementing userCount in room
+[2m2025-05-28T19:08:08.568741Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Sharing snapshot of folders
+[2m2025-05-28T19:08:08.568922Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Folder Snapshot Sent
+[2m2025-05-28T19:08:09.221181Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m user get disconneted
+[2m2025-05-28T19:08:09.221263Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::redis[0m[2m:[0m Persisting crdt snapshot to redis
+[2m2025-05-28T19:08:09.316424Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m user tries to connect for projecId: 5
+[2m2025-05-28T19:08:09.316501Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Tried to fetch room from state
+[2m2025-05-28T19:08:09.316894Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Incrementing userCount in room
+[2m2025-05-28T19:08:09.316932Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Sharing snapshot of folders
+[2m2025-05-28T19:08:09.317262Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Folder Snapshot Sent
+[2m2025-05-28T19:08:29.622756Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m user tries to connect for projecId: 5
+[2m2025-05-28T19:08:29.622811Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Tried to fetch room from state
+[2m2025-05-28T19:08:29.623102Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Incrementing userCount in room
+[2m2025-05-28T19:08:29.623131Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Sharing snapshot of folders
+[2m2025-05-28T19:08:29.623301Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Folder Snapshot Sent
+[2m2025-05-28T19:08:36.207016Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m user get disconneted
+[2m2025-05-28T19:08:38.025705Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m user get disconneted
+[2m2025-05-28T19:08:38.025762Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::redis[0m[2m:[0m Persisting crdt snapshot to redis
+[2m2025-05-28T19:08:44.424321Z[0m [32m INFO[0m [2mfullstack_code_editor_backend[0m[2m:[0m Logging initialised
+[2m2025-05-28T19:08:49.937340Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m user tries to connect for projecId: 5
+[2m2025-05-28T19:08:49.937456Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Tried to fetch room from state
+[2m2025-05-28T19:08:50.295712Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::redis[0m[2m:[0m Successfully loaded snapshot from Redis for 5
+[2m2025-05-28T19:08:50.296780Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Incrementing userCount in room
+[2m2025-05-28T19:08:50.296814Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Sharing snapshot of folders
+[2m2025-05-28T19:08:50.296989Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Folder Snapshot Sent
+[2m2025-05-28T19:09:01.449277Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m user get disconneted
+[2m2025-05-28T19:09:01.449386Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::redis[0m[2m:[0m Persisting crdt snapshot to redis
+[2m2025-05-28T19:09:05.403714Z[0m [32m INFO[0m [2mfullstack_code_editor_backend[0m[2m:[0m Logging initialised
+[2m2025-05-28T19:09:11.678147Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m user tries to connect for projecId: 5
+[2m2025-05-28T19:09:11.678216Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Tried to fetch room from state
+[2m2025-05-28T19:09:12.004736Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::redis[0m[2m:[0m Successfully loaded snapshot from Redis for 5
+[2m2025-05-28T19:09:12.005813Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Incrementing userCount in room
+[2m2025-05-28T19:09:12.005852Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Sharing snapshot of folders
+[2m2025-05-28T19:09:12.006014Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Folder Snapshot Sent
+[2m2025-05-28T19:09:16.812619Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m user get disconneted
+[2m2025-05-28T19:09:16.812705Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::redis[0m[2m:[0m Persisting crdt snapshot to redis
+[2m2025-05-28T19:11:23.117562Z[0m [32m INFO[0m [2mfullstack_code_editor_backend[0m[2m:[0m Logging initialised
+[2m2025-05-28T19:11:45.254236Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m user tries to connect for projecId: 5
+[2m2025-05-28T19:11:45.254327Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Fetched room from redis
+[2m2025-05-28T19:11:45.592643Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::redis[0m[2m:[0m Successfully loaded snapshot from Redis for 5
+[2m2025-05-28T19:11:45.593866Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Incrementing userCount in room
+[2m2025-05-28T19:11:45.593922Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Sharing snapshot of folders
+[2m2025-05-28T19:11:45.594179Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Folder Snapshot Sent
+[2m2025-05-28T19:11:54.383922Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m user get disconneted
+[2m2025-05-28T19:11:54.384038Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::redis[0m[2m:[0m Persisting crdt snapshot to redis
+[2m2025-05-28T19:11:54.481802Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m user tries to connect for projecId: 5
+[2m2025-05-28T19:11:54.481907Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Fetched room from state
+[2m2025-05-28T19:11:54.482258Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Incrementing userCount in room
+[2m2025-05-28T19:11:54.482294Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Sharing snapshot of folders
+[2m2025-05-28T19:11:54.482537Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Folder Snapshot Sent
+[2m2025-05-28T19:11:57.680190Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m user tries to connect for projecId: 5
+[2m2025-05-28T19:11:57.680310Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Fetched room from state
+[2m2025-05-28T19:11:57.680682Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Incrementing userCount in room
+[2m2025-05-28T19:11:57.680721Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Sharing snapshot of folders
+[2m2025-05-28T19:11:57.681027Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Folder Snapshot Sent
+[2m2025-05-28T19:12:05.536380Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m user get disconneted
+[2m2025-05-28T19:12:05.642524Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m user tries to connect for projecId: 5
+[2m2025-05-28T19:12:05.642635Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Fetched room from state
+[2m2025-05-28T19:12:05.642930Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Incrementing userCount in room
+[2m2025-05-28T19:12:05.642961Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Sharing snapshot of folders
+[2m2025-05-28T19:12:05.643194Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Folder Snapshot Sent
+[2m2025-05-28T19:12:10.831566Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m user get disconneted
+[2m2025-05-28T19:12:12.542385Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m user get disconneted
+[2m2025-05-28T19:12:12.542592Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::redis[0m[2m:[0m Persisting crdt snapshot to redis
+[2m2025-05-28T19:12:44.731647Z[0m [32m INFO[0m [2mfullstack_code_editor_backend[0m[2m:[0m Logging initialised
+[2m2025-05-28T19:13:10.849379Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m user tries to connect for projecId: 5
+[2m2025-05-28T19:13:10.849470Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Fetched room from redis
+[2m2025-05-28T19:13:11.126628Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::redis[0m[2m:[0m Successfully loaded snapshot from Redis for 5
+[2m2025-05-28T19:13:11.127699Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Incrementing userCount in room
+[2m2025-05-28T19:13:11.127752Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Sharing snapshot of folders
+[2m2025-05-28T19:13:11.127906Z[0m [32m INFO[0m [2mfullstack_code_editor_backend::services::socket[0m[2m:[0m Folder Snapshot Sent

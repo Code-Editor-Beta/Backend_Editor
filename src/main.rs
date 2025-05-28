@@ -1,5 +1,6 @@
 use std::{collections::HashMap, sync::Arc};
 
+use crate::models::room_wrapper::RoomWrapper;
 use anyhow::Result;
 use axum::{
     extract::State,
@@ -12,6 +13,12 @@ use dashmap::DashMap;
 use dotenv::dotenv;
 use tokio;
 use tower_http::cors::{Any, CorsLayer};
+
+use std::sync::atomic::{AtomicUsize, Ordering};
+//Logging
+use tracing_appender::rolling;
+use tracing_subscriber::{fmt, EnvFilter};
+
 mod models;
 mod services;
 
@@ -19,8 +26,8 @@ mod services;
 struct AppState {
     db: mongodb::Database,
     redis: redis::aio::ConnectionManager,
-    template_cache: DashMap<String, Arc<HashMap<String, String>>>,
-    rooms: Arc<DashMap<String, Arc<BroadcastGroup>>>,
+    template_cache: DashMap<String, Arc<HashMap<String, String>>>, //DashMap is used to provide a thread-Safe Hashmap
+    rooms: Arc<DashMap<String, Arc<RoomWrapper>>>, //Arc used to provide bouncing between multiple threads
 }
 
 #[axum::debug_handler]
@@ -35,7 +42,18 @@ async fn list_rooms(State(state): State<AppState>) -> impl IntoResponse {
 
 #[tokio::main]
 async fn main() -> Result<()> {
+    let file_appender = rolling::daily("logs", "myapp.log");
+    let (non_blocking, _guard) = tracing_appender::non_blocking(file_appender);
+
+    tracing_subscriber::fmt()
+        .with_writer(non_blocking)
+        .with_env_filter("info")
+        .init();
+
+    tracing::info!("Logging initialised");
+
     dotenv().ok();
+
     let db = services::db::connect_db().await?;
     let redis = services::redis::connect_redis().await?;
     let template_cache = DashMap::new();
@@ -47,7 +65,8 @@ async fn main() -> Result<()> {
         template_cache,
         rooms,
     };
-    //seting cors
+
+    //setting cors
     let cors = CorsLayer::new()
         .allow_origin(Any)
         .allow_methods(Any)

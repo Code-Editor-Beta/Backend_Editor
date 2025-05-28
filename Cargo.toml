@@ -27,3 +27,7 @@ yrs = "0.18.2"
 futures-util = "0.3.31"
 futures-core = "0.3.31"
 axum-ycrdt-websocket = "0.1.0"
+tracing = "0.1.41"
+tracing-subscriber = { version = "0.3.19", features = ["fmt", "env-filter"] }
+tracing-appender = "0.2.3"
+bincode = "1.3"
