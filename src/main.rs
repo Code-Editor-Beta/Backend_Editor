@@ -1,6 +1,6 @@
 use std::{collections::HashMap, sync::Arc};
 
-use crate::models::room_wrapper::RoomWrapper;
+use crate::services::{auth, crdt_ops, db, project_services, redis as rd, socket};
 use anyhow::Result;
 use axum::{
     extract::State,
@@ -8,26 +8,24 @@ use axum::{
     routing::{get, post},
     Json, Router,
 };
-use axum_ycrdt_websocket::broadcast::BroadcastGroup;
 use dashmap::DashMap;
 use dotenv::dotenv;
 use tokio;
 use tower_http::cors::{Any, CorsLayer};
-
-use std::sync::atomic::{AtomicUsize, Ordering};
+//used for caching
+use moka::sync::Cache;
 //Logging
 use tracing_appender::rolling;
-use tracing_subscriber::{fmt, EnvFilter};
 
 mod models;
 mod services;
-
+use tracing::info;
 #[derive(Clone)]
 struct AppState {
     db: mongodb::Database,
     redis: redis::aio::ConnectionManager,
-    template_cache: DashMap<String, Arc<HashMap<String, String>>>, //DashMap is used to provide a thread-Safe Hashmap
-    rooms: Arc<DashMap<String, Arc<RoomWrapper>>>, //Arc used to provide bouncing between multiple threads
+    template_cache: Cache<String, Arc<HashMap<String, String>>>,
+    rooms: Arc<DashMap<String, Arc<crdt_ops::models::RoomWrapper>>>,
 }
 
 #[axum::debug_handler]
@@ -54,9 +52,13 @@ async fn main() -> Result<()> {
 
     dotenv().ok();
 
-    let db = services::db::connect_db().await?;
-    let redis = services::redis::connect_redis().await?;
-    let template_cache = DashMap::new();
+    let db = db::connect_db::connect_db().await?;
+    let redis = rd::connect_redis::connect_redis().await?;
+    info!("Intializing cache memory");
+    let template_cache: Cache<String, Arc<HashMap<String, String>>> = Cache::builder()
+        .time_to_live(std::time::Duration::from_secs(3600))
+        .max_capacity(32)
+        .build();
     let rooms = Arc::new(DashMap::new());
 
     let state = AppState {
@@ -74,13 +76,19 @@ async fn main() -> Result<()> {
 
     let app = Router::new()
         .route("/", get(list_rooms))
-        .route("/auth/github", get(services::auth::github_login))
+        .route("/auth/github", get(auth::github_login::github_login))
         .route(
             "/auth/github/callback",
-            get(services::auth::github_callback),
+            get(auth::github_callback::github_callback),
         )
-        .route("/api/projects", post(services::project::create_project))
-        .merge(services::socket::router())
+        .route(
+            "/api/projects",
+            post(project_services::create_project::create_project),
+        )
+        .route(
+            "/ws/:project_id",
+            get(socket::folder_socket::ws_folder_handler),
+        )
         .with_state(state)
         .layer(cors);
 

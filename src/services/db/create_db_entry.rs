@@ -1,21 +1,10 @@
-use super::super::models::user::User;
+use crate::models::user::User;
+
 use crate::AppState;
 use anyhow::Result;
 use axum::extract::State;
 use chrono::Utc;
-use mongodb::{bson::oid::ObjectId, Client, Collection, Database};
-use std::env;
-
-/**
- * function to connect_db
- */
-pub async fn connect_db() -> Result<Database> {
-    let uri = env::var("MONGODB_URI").expect("You must set the ENV for MongoDB_URI");
-
-    let client = Client::with_uri_str(&uri).await?;
-    let db = client.database("backendRust");
-    Ok(db)
-}
+use mongodb::{bson::oid::ObjectId, Collection};
 
 /**
  * function to create_user entry in db
